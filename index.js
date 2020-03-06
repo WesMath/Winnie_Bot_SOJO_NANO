@@ -16,7 +16,9 @@ const logger = require('./logger.js');
 const gameloop = require('node-gameloop');
 const timezoneJS = require('timezone-js');
 const mongoose = require('mongoose');
+const {Pool} = require('pg');
 
+const pgDB = new Pool();
 const conn = mongoose.connection;
 
 global.client = new Discord.Client();

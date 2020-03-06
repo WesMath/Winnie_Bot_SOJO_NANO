@@ -5,6 +5,22 @@ class Database {
   /** Initialise variables required for challenge creation and summaries. */
   constructor() {}
   /**
+   * Updates the database
+   * @param {String} fields - The list of fields to update.
+   * @param {String} values - The list of values to update with.
+   * @return {Promise} - Promise object.
+   */
+  async pgUpdate(fields, values) {
+    const pool = new Pool()(async () => {
+      const { rows } = await pool.query('SELECT * FROM users WHERE id = $1', [1])
+      console.log('user:', rows[0])
+    })().catch(e =>
+      setImmediate(() => {
+        throw e
+      })
+    )
+  }
+  /**
    * Inserts a record into the database
    * @param  {String} db - The database to insert into.
    * @param {String} info - The data to insert.

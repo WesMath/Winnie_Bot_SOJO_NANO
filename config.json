@@ -1,5 +1,5 @@
 {
-  "token": "${token}$",
-  "storage_url": "${dbloc}$",
+  "token": "Mzg3MDU4MzA4Nzk3OTU2MTE4.XXB5Wg.vmDLmd2waINH5g_6DMcMNO84zO0",
+  "storage_url": "mongodb://mongo:27017/Winnie_DB",
   "cmd_prefix": {"default": "!"}
 }
